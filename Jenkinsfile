@@ -14,7 +14,7 @@ node ('built-in') {
     stage('Build') {
         // Run the maven build
         // withEnv(["MVN_HOME=$mvnHome"]) {
-        withMaven(maven: 'M3')
+        withMaven(maven: 'M3') {
             if (isUnix()) {
                 // sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
                 // sh "'$MVN_HOME/bin/mvn' clean install"
